@@ -1,5 +1,5 @@
 <p align="center">
-  <img src=".bash-rf.png">
+  <img src="src/">
 </p>
 <h1 align="center">Chat-bot-GPT-Bash</h1>
 <p align="center">
