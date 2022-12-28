@@ -3,10 +3,9 @@
 </p>
 <h1 align="center">Chat-bot-GPT-Bash</h1>
 <p align="center">
-  <img src="https://img.shields.io/badge/Brute-Force-red?style=for-the-badge">
-  <img src="https://img.shields.io/badge/Capture-Signal-blue?style=for-the-badge">
-  <img src="https://img.shields.io/badge/Replay-Signal-green?style=for-the-badge">
-  <img src="https://img.shields.io/badge/Hack-Radio-pink?style=for-the-badge">
+  <img src="https://img.shields.io/badge/Chat-gpt-cyan?style=for-the-badge">
+  <img src="https://img.shields.io/badge/Shell-lightgreen?style=for-the-badge">
+  <img src="https://img.shields.io/badge/Script-brown?style=for-the-badge">
  
 </p>
 <p align="center">
