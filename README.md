@@ -15,6 +15,6 @@
 </p>
 A telegram chat to communicate with gpt chat and execute shell commands and scripts
 <p align="center">
-  <img width="300" height="300" src="src/demo1.jpg">
+  <img height="300" src="src/demo1.jpg">
 </p>
-##
+
