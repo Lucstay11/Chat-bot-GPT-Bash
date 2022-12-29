@@ -17,4 +17,12 @@
 <p align="center">
   <img height="600" src="src/demo1.jpg">
 </p>
+**`Installation`**
+
+```
+$ git clone https://github.com/Lucstay11/Chat-bot-GPT-Bash
+```
+```
+$ cd SNCB-API-bash
+```
 
