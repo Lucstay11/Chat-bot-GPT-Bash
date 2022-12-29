@@ -13,7 +13,7 @@
   <img src="https://img.shields.io/badge/Open%20Source-Yes-cyan?style=flat-square">
   <img src="https://img.shields.io/badge/Written%20In-JS-yellow?style=flat-square">
 </p>
-<h2 align="center">A telegram chat to communicate with gpt chat and execute shell commands and scripts</h2>
+<h2 align="center">A telegram chat to communicate with chat gpt and execute shell commands and scripts</h2>
 <p align="center">
   <img height="600" src="src/demo1.jpg">
 </p>
