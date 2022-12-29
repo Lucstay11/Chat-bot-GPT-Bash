@@ -30,4 +30,4 @@ $ git clone https://github.com/Lucstay11/Chat-bot-GPT-Bash
 $ /Chat-bot-GPT-Bash
 php -S 0.0.0.0:8080
 ```
-**`N'hésiter pas à me contacter si vous vouler ajouter un pays. Ce script aura sûrement plusieur version!`**
+**`I use php but you can use any web server (apache, python..)`**
