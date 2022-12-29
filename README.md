@@ -23,7 +23,11 @@
 ```
 $ git clone https://github.com/Lucstay11/Chat-bot-GPT-Bash
 ```
+
+**`Start web server`**
+
 ```
-$ cd SNCB-API-bash
+$ /Chat-bot-GPT-Bash
+php -S 0.0.0.0:8080
 ```
 
