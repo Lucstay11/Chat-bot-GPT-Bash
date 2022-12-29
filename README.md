@@ -31,3 +31,7 @@ $ /Chat-bot-GPT-Bash
 php -S 0.0.0.0:8080
 ```
 **`I use php but you can use any web server (apache, python..)`**
+<p align="center">
+  <img height="600" src="src/demo2.jpg">
+   <img height="600" src="src/demo3.jpg">
+</p>
