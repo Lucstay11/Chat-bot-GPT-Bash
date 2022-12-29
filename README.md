@@ -32,9 +32,11 @@ php -S 0.0.0.0:8080
 ```
 **`I use php but you can use any web server (apache, python..)`**
 
-<i>To communicate with chat gpt you just have to insert your <b>Api Key</b> in the index.js</i>
+<i align="center">To communicate with chat gpt you just have to insert your <b>Api Key</b> in the index.js</i>
 
 <p align="center">
   <img height="600" src="src/demo2.jpg">
    <img height="600" src="src/demo3.jpg">
 </p>
+
+<i align="center">Execute shell commands and aliases. Shell commands can be added as arguments over aliases</i>
