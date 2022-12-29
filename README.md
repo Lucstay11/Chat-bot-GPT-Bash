@@ -40,3 +40,8 @@ php -S 0.0.0.0:8080
 </p>
 
 <i align="center">Execute shell commands and aliases. Shell commands can be added as arguments over aliases</i>
+
+<p align="center">
+  <img height="600" src="src/demo4.jpg">
+</p>
+**`Customize and configure the chat!`**
