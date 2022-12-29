@@ -31,6 +31,8 @@ $ /Chat-bot-GPT-Bash
 php -S 0.0.0.0:8080
 ```
 **`I use php but you can use any web server (apache, python..)`**
+<i>All actions and/or activities related to this program are <b>your sole responsibility.</b> Misuse of this toolkit may result in <b>criminal prosecution</b> against the individuals in question. <b>Contributors will not be held responsible for any criminal charges brought against people who misuse this toolkit to break the law</b>.
+
 <p align="center">
   <img height="600" src="src/demo2.jpg">
    <img height="600" src="src/demo3.jpg">
