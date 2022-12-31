@@ -35,7 +35,7 @@ php -S 0.0.0.0:8080
 ```
 **`I use php but you can use any web server (apache, python..)`**
 
-<i align="center">To communicate with chat gpt you just have to insert your <b>Api Key</b> in the index.js</i>
+<i align="center">To communicate with chat gpt you just have to insert your <b>Api Key</b> in the index.js or in the Chat-Bot settings</i>
 
 <p align="center">
   <img height="600" src="src/demo2.jpg">
