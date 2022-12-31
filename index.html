@@ -1,0 +1,200 @@
+<html>
+<head>
+<title>Chat-Bot</title>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" href="src/chat-gpt-logo.jpg">
+<link href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp" rel="stylesheet">                                                                                                                                                                             
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,200" />
+<script src="src/mod/jquery.js"></script>
+<link rel="stylesheet" href="src/mod/bootstrap.css" crossorigin="anonymous">
+<style>
+    body{background-size: cover;background-attachment: fixed;}
+    .message-left{
+     background: rgb(252,252,252);
+     background: radial-gradient(circle, rgba(252,252,252,1) 88%, rgba(240,236,236,1) 93%, rgba(212,227,214,1) 100%, rgba(11,24,14,1) 100%, rgba(0,163,245,1) 100%, rgba(0,212,255,1) 100%);
+     box-shadow:0px 0px 4px black;
+     border-top-right-radius:20px;
+     border-top-left-radius:20px;
+     border-bottom-right-radius:20px;
+     display: inline-block;
+     padding: 1px;
+     width: 70%;
+     margin-top:5px;
+     }
+    .message-right{
+     box-shadow:0px 0px 4px black;
+     border-top-right-radius:20px;
+     border-top-left-radius:20px;
+     border-bottom-left-radius:20px;
+     float: right;
+     width: 60%;
+     margin-top:5px;
+     }
+    .bg-gpt{
+     background: rgb(162,235,165);
+     background: radial-gradient(circle, rgba(162,235,165,1) 0%, rgba(5,32,9,1) 100%, rgba(11,24,14,1) 100%, rgba(0,163,245,1) 100%, rgba(0,212,255,1) 100%);
+     }
+    .bg-script{
+     background: rgb(78,9,9);
+     background: radial-gradient(circle, rgba(78,9,9,1) 78%, rgba(27,3,0,1) 100%, rgba(11,24,18,1) 100%, rgba(252,252,252,1) 100%, rgba(255,255,255,1) 100%, rgba(4,130,221,1) 100%);
+     }
+    .bg-shell{
+     background: rgb(255,255,255);
+     background: radial-gradient(circle, rgba(255,255,255,1) 80%, rgba(2,0,0,1) 88%, rgba(27,3,0,1) 100%, rgba(148,111,111,1) 100%, rgba(252,252,252,1) 100%, rgba(255,255,255,1) 100%, rgba(4,130,221,1) 100%);
+     }
+     button{
+       border:none;
+       background:none;
+      }
+     button:focus,input:focus {
+      outline: none;
+     box-shadow: none;
+     }
+     #ModalSet {
+  transition:all 2s;
+  display: none;
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 0px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+#modal-content-set {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 0px;
+   float:right;
+  width: 65%;
+  border-radius:10px;
+}
+
+#ModalCall {
+  transition:all 2s;
+  display: none;
+  position: fixed; /* Stay in place */
+  padding-top: 0px; /* Location of the box */
+  z-index: 1; /* Sit on top */
+  padding-top: 0px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+}
+
+#modal-content-call {
+  background-color: #fefefe;
+  width: 100%;
+  height:100%;
+  background: rgb(2,0,36);
+  background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(45,107,138,1) 100%, rgba(0,212,255,1) 100%);
+}
+
+ul li{
+   list-style:none;
+   display:flex;
+   align-items:center;
+   margin-top:15px;
+   }
+#icon-setting span{
+    color:grey;
+    margin-right:15px;
+   }
+</style>
+</head>
+<body>
+
+         <div id="contenair-chat">
+              <div id="header" style="display:flex;box-shadow:0px 0px 4px black;align-items: center;justify-content:center;position:fixed;width:100%;top:0px;" id="header-chat">
+                  <p class="text-center" id="user-photo" style="margin-left:20px;color:white;border-radius:100%;height:39px;width:39px;align-items:center;justify-content:center;display:flex;"></p>
+                      <div style="display:block;">
+                         <span id="user-name" style="color:white;margin-left:4px;"></span>
+                            <p id="user-status" style="color:white;opacity:0;font-size:0.9em;margin-left:4px;"></p>
+                                  <script>$("#user-status").animate({"opacity": "0.7"}, 1000);</script>
+                      </div>
+
+                         <button onclick="setting('setting');"><span class="material-symbols-outlined" style="color:white;margin-left:200px;">menu</span></button>
+              </div>
+                   <div id="box-message" style="height:100%;width:100%;">
+                             <p style="height:60px;"></p>
+                              <p id="day" style="font-size:0.9em;border-radius:20px;background-color:grey;color:white;position:fixed;display:block;padding:4px;left: 50%;margin-left:-50px;margin-top:10px;opacity:0.5;font-weight:500;"><p>
+                             <div class="message-left">
+                                      <p id="first-mess" style="margin-left:10px;"></p>
+                                      <span id="first-date" style="color:grey;font-size:0.8em;float:right;margin-right:5px;"></span>
+                                  </div>
+                             <div id="box-message-data">
+
+                             </div>
+                            <p style="height:80px;"></p>
+                   </div>
+                        <div id="box-input" style="display:flex;position:fixed;bottom:0px;background-color:white;width:100%;padding:10px;align-items:center;">
+                             <button id="bashlogo" style="background-color:white;border:none;"><img id="imgbash" style="height:30px;border-radius:20px;" src="src/chat-gpt-logo.jpg"></button>
+                                <input id="input" oninput="message('input');" type="text" style="border:none;width:200px;" placeholder="Message">
+                                    <div id="input-icon" style="display:flex;">
+                                         <div style="display:block;">
+                                         <button onclick="message('history_input','up');"><span style="font-size:1em;" class="material-symbols-outlined">expand_less</span></button>
+                                         <button onclick="message('history_input','down');"><span style="font-size:1em;" class="material-symbols-outlined">expand_more</span></button>
+                                         </div>
+                                         <button id="btnlink" onclick="message('link');" style="border:none;background-color:white;font-size:1.5em;color:grey;"><span style="transform:rotate(-140deg);" class="material-symbols-outlined">attach_file</span></button>
+                                          <button id="btnmicro" onclick="message('micro');" style="border:none;background-color:white;font-size:1.5em;color:grey;"><span class="material-icons-outlined">keyboard_voice</span></button>
+                                    </div>
+                                          <button id="btnsend" onclick="message('send');" style="border:none;background-color:white;font-size:1.5em;color:#2DABEA;display:none;margin-left:40px;"><span class="material-icons-outlined">send</span></button>
+
+                        </div>
+         </div>
+
+<div id="ModalSet">
+  <div id="modal-content-set">
+        <ul id="icon-setting">
+          <li><span style="font-weight:0;" class="material-icons-outlined">settings</span>Options</li>
+                  <div>
+                  <h7>Input interpreter</h7>
+                  <p><img style="height:20px;border-radius:20px;" src="src/bash.png">Bash command:<span style="color:black;font-size:1rem;"> $</span></p>
+                  <hr>
+                  <p><img style="height:20px;border-radius:20px;" src="src/chat-gpt-logo.jpg">Chat GPT:<span style="color:grey;"> /</span><button onclick="setting('set_gpt');"><span id="btnsetgpt" style="margin-left:20px;" class="material-icons-outlined">chevron_right</span></button></li></p>
+                             <div id="boxsetgpt" style="display:none;overflow:auto;height:80px;">
+                                  <span class="material-symbols-outlined">model_training</span><span style="font-size:0.8em;margin-left:-15px;">Model: text-davinci-003</span>
+                                  <p><span class="material-symbols-outlined">key</span><input id="apikey" onchange="setting('set_api_gpt',1,this.value);" type="text" style="width:150px;" placeholder="Api key"></p>
+                                  <p><span class="material-symbols-outlined">pin</span><input id="apiword" onchange="setting('set_api_gpt',2,this.value);" type="number" max="4000" style="width:150px;" placeholder="Max word response"></p>
+                             </div>
+                  <hr>
+                  <p><img style="height:20px;border-radius:20px;" src="src/script-shell.png">Execute alias shell:<span style="color:grey;"> #</span></li></p>
+                          <div style="overflow:auto;height:80px;">
+                               <div id="list-alias">
+                               </div>
+                                <button style="display:block;margin:0 auto;" onclick="setting('del_alias',1);"><span style="color:black;margin-top:8px;" class="material-symbols-outlined">delete_forever</span></button>
+                              <hr>
+                                   <input id="alias" type="text" style="display:block;margin:0 auto;color:black;width:150px;" placeholder="alias">
+                                   <span style="color:black;" class="material-symbols-outlined">terminal</span><input id="command" type="text" style="display:block;margin:0 auto;color:grey;width:150px;" placeholder="command">
+                              <button onclick="setting('add_alias');" style="display:block;margin:0 auto;margin-top:10px;"><span style="color:black;" class="material-symbols-outlined">add_circle</span></button>
+                          </div>
+
+                  </div>
+          <hr style="background-color:grey;padding:3px;opacity:0.1;">
+          <li><span style="border:1px solid grey;border-radius:100%;" class="material-symbols-outlined">smart_toy</span><input id="inputname" type="text" onchange="setting('name','',this.value);" style="width:150px;" placeholder="name" maxlength="7"></li>
+          <li><span id="setsound" class="material-icons-outlined">volume_up</span><button id="sound" onclick="setting('sound',this.value);" value="1">Remove sound</button></li>
+          <li><span style="transform:rotate(360deg);" class="material-symbols-outlined">brush</span>Change background</li>
+                 <div style="display:flex;margin-bottom:20px;">
+                 <button onclick="setting('background',this.name,this.value);" name="" value="jpg"><img style="width:20px;height:20px;border-radius:4px;" src="src/wall/wallpapper.jpg"></button>
+                 <button onclick="setting('background',this.name,this.value);" name="2" value="png"><img style="width:20px;height:20px;border-radius:4px;" src="src/wall/wallpapper2.png"></button>
+                 <button onclick="setting('background',this.name,this.value);" name="3" value="jpg"><img style="width:20px;height:20px;border-radius:4px;" src="src/wall/wallpapper3.jpg"></button>
+                 <button onclick="setting('background',this.name,this.value);" name="4" value="jpg"><img style="width:20px;height:20px;border-radius:4px;" src="src/wall/wallpapper4.jpg"></button>
+                 <button onclick="setting('background',this.name,this.value);" name="5" value="png"><img style="width:20px;height:20px;border-radius:4px;" src="src/wall/wallpapper5.png"></button>
+                 <button onclick="setting('background',this.name,this.value);" name="7" value="jpg"><img style="width:20px;height:20px;border-radius:4px;" src="src/wall/wallpapper7.jpg"></button>
+                 </div>
+                 <li><span class="material-symbols-outlined">forum</span><button id="messtrans" onclick="setting('trans_mess');">Transparent</button></li>
+          <li><span class="material-icons-outlined">delete</span><button onclick="setting('del_mess');">Delete chat</button></li>
+        <ul>
+  </div>
+</div>
+
+<script src="index.js"></script>
+</body>
+</html>
+
