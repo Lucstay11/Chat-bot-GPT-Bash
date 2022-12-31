@@ -43,7 +43,7 @@ php -S 0.0.0.0:8080
 </p>
 
 <i align="center">Execute shell commands and aliases. Shell commands can be added as arguments over aliases</i>
-<i align="center">You can block the execution of certain commands by adding them to command.php</i>
+<i align="center">You can block the execution of certain commands by adding them to <b>command.php</b></i>
 <p align="center">
   <img height="600" src="src/demo5.jpg">
 </p>
