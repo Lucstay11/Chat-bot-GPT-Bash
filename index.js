@@ -323,6 +323,7 @@ function localstorage(key,data){
        }
        if(localStorage.getItem('Chat')!=null){
         document.querySelector("#box-message-data").innerHTML=localStorage.getItem('Chat');
+        chatbox.scrollTop = chatbox.scrollHeight;
        }
        if(localStorage.getItem('Api_key')!=null){
          apikey.value=localStorage.getItem('Api_key');
@@ -355,4 +356,3 @@ function localstorage(key,data){
       }
     }
     localstorage();
-chatbox.scrollTop = chatbox.scrollHeight;
