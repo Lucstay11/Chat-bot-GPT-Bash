@@ -16,22 +16,18 @@ var tab=[];
              name:"My Bot",
              photocolor:"#35CDE4",
              backgroundcolor:"#4885A4",
-             wallpapper:"url('src/wall/wallpapper7.jpg')",
+             wallpapper:"url('src/wall/wallpapper.jpg')",
              firstmessage: "Hello I m your bot and I help you",
              status:"online",
              firstdate: hours
              };
 //Setting command: Execute shell command or script with alias
 var Command = {
-                vibre:"termux-vibrate",
-                dit:"termux-tts-speak",
-                PS:"ps",
-                on:"termux-torch on",
-                off:"termux-torch off",
-                };
+               hello:"echo Hello!",
+              };
 //Setting your API CHAT GPT
-var API_KEY = "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"; //Your API KEY
-var MAX_COUNT_TEXT = 4000; // The max word of the chat gpt response
+var API_KEY = ""; //Your API KEY
+var MAX_COUNT_TEXT = 4000; // The max word of the chat gpt response => 4000 is the max
 //_________________________________________________________________________________
     var audiosend = new Audio('src/send.mp3');
     var audioreceive = new Audio('src/receive.mp3');
