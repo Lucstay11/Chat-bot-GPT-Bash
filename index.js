@@ -234,7 +234,7 @@ addEventListener('keypress',(e)=>{if(e.key=="Enter"){message('send');}})
           case "add_alias":
                  if(alias.value!="" && command.value!=""){
                    Command[alias.value]=command.value;
-                   document.querySelector("#list-alias").innerHTML+=`<span class="alias" style="margin-bottom:-10px;color:black;">#${alias.value}</span>:<span class="command" style="color:grey;">${command.value}</span><br>`;
+                   document.querySelector("#list-alias").innerHTML+=`#<span class="alias" style="margin-bottom:-10px;color:black;">${alias.value}</span>:<span class="command" style="color:grey;">${command.value}</span><br>`;
                    alias.value="";command.value="";
                    setTimeout(()=>{localstorage('Save_alias',document.querySelector("#list-alias").innerHTML);},2000)
                    }else{alias.placeholder="Enter value";command.placeholder="Enter value";}
@@ -258,7 +258,7 @@ addEventListener('keypress',(e)=>{if(e.key=="Enter"){message('send');}})
     if(Object.keys(Command)==""){document.querySelector("#list-alias").innerHTML+=`<p style="text-align:center;"><i class="fa fa-spinner"></i>Any alias</p>`;}
      else{
     for(let i in Command){
-       document.querySelector("#list-alias").innerHTML+=`<span class="alias" style="margin-bottom:-10px;color:black;">${i}</span><span class="command" style="color:grey;">${Command[i]}</span><br>`;
+       document.querySelector("#list-alias").innerHTML+=`#<span class="alias" style="margin-bottom:-10px;color:black;">${i}</span><span class="command" style="color:grey;">${Command[i]}</span><br>`;
        }
      }
 
