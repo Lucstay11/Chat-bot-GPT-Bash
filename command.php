@@ -1,5 +1,5 @@
 <?php
-     $BLOQUED=["banned1","banned2..."]; // Between the commands you don't want to run
+     $BLOQUED=["command1","command2..."]; // Between the commands you don't want to run
 
      $c=$_POST["command"];
      $c=str_replace("'","",$c);
