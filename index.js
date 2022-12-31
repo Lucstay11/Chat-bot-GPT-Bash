@@ -10,7 +10,7 @@ var m;
 var tab=[];
 
 //_________________________________SETTINGS_______________________________________
-//          The settings can by change in the web or over here
+//          The settings can by change in the web settings or over here
 //Setting parameter: Change bot settings here
  const Bot = {
              name:"My Bot",
