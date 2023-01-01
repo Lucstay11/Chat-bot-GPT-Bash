@@ -1,5 +1,5 @@
 <p align="center">
-<a href="https://github.com/Ignitetch/AdvPhishing/releases"><img title="GitHub version" src="https://img.shields.io/badge/version-1-blue" ></a>  
+<a href="https://github.com/Ignitetch/AdvPhishing/releases"><img title="GitHub version" src="https://img.shields.io/badge/version-2-blue" ></a>  
 </p>
 <p align="center">
   <img src="src/logo-gpt-bash.jpg">
