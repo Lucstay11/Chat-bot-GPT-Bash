@@ -224,7 +224,6 @@ addEventListener('keypress',(e)=>{if(e.key=="Enter"){message('send');}})
                      localStorage.setItem('Transparent', true);
                    }else{
                      messtrans.innerHTML="Transparent";
-                     alert(tab);
                      for(i=0;i<nb.length;i++){nb[i].classList.add(tab[i]);}
                      document.querySelector("#header").style.backgroundColor=Bot.backgroundcolor;
                      localStorage.setItem('Transparent', false);
