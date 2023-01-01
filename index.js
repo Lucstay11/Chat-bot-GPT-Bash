@@ -375,10 +375,10 @@ function localstorage(key,data){
 
 //VOICE RECOGNITION
 if ("webkitSpeechRecognition" in window) {
+ function speech(etat){
 let Recognition = new webkitSpeechRecognition();
 Recognition.continuous = true;
 Recognition.interimResults = true;
- function speech(etat){
   switch(etat){
 case "start":
 Recognition.start();
