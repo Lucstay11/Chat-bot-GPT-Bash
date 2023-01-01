@@ -418,6 +418,6 @@ Recognition.onresult = (event) => {
   }
 }
 
-}else{alert("non");}
+}else{btnmicro.style.opacity="0";}
 
 
