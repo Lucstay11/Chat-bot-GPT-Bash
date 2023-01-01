@@ -21,10 +21,11 @@
   <img height="600" src="src/demo1.jpg">
 </p>
 <h1 align="center">Use Voice recognition </h1>
+<i align="center">You can ask your questions with <b>voice recognition</b>!</i>
 <p align="center">
   <img height="600" src="src/demo4.jpg">
 </p>
-<i align="center">You can ask your questions with <b>voice recognition</b>!</i>
+
 
 **`Installation`**
 
