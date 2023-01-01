@@ -16,7 +16,7 @@ var tab=[];
              name:"My Bot",
              photocolor:"#35CDE4",
              backgroundcolor:"#4885A4",
-             wallpapper:"url('src/wall/wallpapper7.jpg')",
+             wallpapper:"url('src/wall/wallpapper.jpg')",
              firstmessage: "Hello I m your bot and I help you",
              status:"online",
              firstdate: hours
