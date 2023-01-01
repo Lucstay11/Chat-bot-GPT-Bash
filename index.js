@@ -23,12 +23,8 @@ var tab=[];
              };
 //Setting command: Execute shell command or script with alias
 var Command = {
-                vibre:"termux-vibrate",
-                dit:"termux-tts-speak",
-                PS:"ps",
-                on:"termux-torch on",
-                off:"termux-torch off",
-                };
+               hello:"echo hello!",
+              };
 //Setting your API CHAT GPT
 var API_KEY = ""; //Your API KEY
 var MAX_COUNT_TEXT = 4000; // The max word of the chat gpt response
