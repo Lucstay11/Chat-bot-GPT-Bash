@@ -20,6 +20,10 @@
 <p align="center">
   <img height="600" src="src/demo1.jpg">
 </p>
+<p align="center">
+  <img height="600" src="src/demo4.jpg">
+</p>
+<i align="center">You can ask your questions with <b>voice recognition</b>!</i>
 
 **`Installation`**
 
