@@ -20,7 +20,7 @@
 <p align="center">
   <img height="600" src="src/demo1.jpg">
 </p>
-<h1 align="center">Use Voice recognition </h1>
+<h1 align="center">Use Voice recognition and text to speech </h1>
 <i align="center">You can ask your questions with <b>voice recognition</b>!</i>
 <p align="center">
   <img height="600" src="src/demo4.jpg">
@@ -54,7 +54,7 @@ php -S 0.0.0.0:8080
   <img height="600" src="src/demo5.jpg">
 </p>
 
-**`Customize and configure the chat!`**
+**`Customize and configure the chat! Have fun!`**
 
 ### Find Me on :
 <p align="left">
