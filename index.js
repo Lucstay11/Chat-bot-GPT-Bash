@@ -367,12 +367,12 @@ function localstorage(key,data){
                  setextospeech.style.opacity="0.3";
                  textospeech.innerHTML="Enable";
                  textospeech.value=2;
-                 utter.volume=1;
+                 utter.volume=0;
             }else{
                  setextospeech.style.opacity="1";
                  textospeech.innerHTML="Disable";
                  textospeech.value=1;
-                 utter.volume=0;
+                 utter.volume=1;
                  }
        }
        if(localStorage.getItem('Chat')!=null){
