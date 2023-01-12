@@ -469,3 +469,4 @@ Recognition.onresult = (event) => {
             if(etat=="on"){utter.volume=1;}
       window.speechSynthesis.speak(utter);
     }
+if( navigator.userAgent.match(/iPhone/i) || navigator.userAgent.match(/iPad/i) ){ btnmicro.style.display="none"; btnimg.style.marginRight="0px"; btnidea.style.marginRight="0px"; boxfleche.style.marginLeft="0px"; input.style.width="150px"; boxwall.style.justifyContent="none"; }
