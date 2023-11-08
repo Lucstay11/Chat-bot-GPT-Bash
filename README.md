@@ -39,7 +39,7 @@ $ git clone https://github.com/Lucstay11/Chat-bot-GPT-Bash
 $ /Chat-bot-GPT-Bash
 php -S 0.0.0.0:8080
 ```
-**`I use php but you can use any web server (apache, python..)`**
+**`I use php but you can use any web server (apache,nginx,nodejs,python,ruby,...)`**
 
 <i align="center">To communicate with chat gpt you just have to insert your <b>Api Key</b> in the index.js or in the Chat-Bot settings</i>
 
